@@ -1,2 +1,99 @@
+<!DOCTYPE html>
+
 <a href="/SolarSystem/system.html">Solar System</a>
 <a href="/SocialMedia/text.html">Social Media</a>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Portfolio Website</title>
+    <style>
+        body {
+            background: #5f5567;
+            font-family: sans-serif;
+        }
+        #container {
+            width: 800px;
+            margin: 20px auto 0;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #cccccc;
+        }
+        h1 {
+            font-size: 24px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 14px;
+            color: #000000;
+            line-height: 24px;
+        }
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Aashish Harishchandre</h1>
+        <img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg" alt="Picture of Aashish Harishchandre">
+        <p>Welcome to my portfolio website. I'm a student at Michigan State University pursing a degree in Computer Engineering.</p>
+        <p>Feel free to browse around and learn more about me and my work.</p>
+        <p>If you have any questions, please <a href="mailto:harishch@msu.edu">get in touch</a>.</p>
+    </div>
+    <div id="container">
+        <h1><a href="https://msu.edu/">Michigan State University</a></h1>
+        <img src="https://pbs.twimg.com/profile_images/996473086361919489/nU_DabyM_400x400.jpg" alt="Picture of Michigan State University">
+        <p>Michigan State University is a public research university in East Lansing, Michigan, United States. MSU was founded in 1855 and served as a model for land-grant universities later created under the Morrill Act of 1862. The university was founded as the Agricultural College of the State of Michigan, one of the country's first institutions of higher education to teach scientific agriculture.</p>
+    </div>
+    <button id="top-button" style="position:fixed; bottom:10px; right:10px;
+    background: linear-gradient(to right, #ff0000, #0400ff); /* Adding a gradient background */
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Adding shadows to the button */
+    transform: scale(1); /*  To avoid button transform on page load */
+    transition: all 0.3s ease-in-out; /* Adding a transition effect */
+">
+    <i class="fa fa-arrow-up" style="margin-right: 10px;"></i> Go to Top
+</button>
+
+</body>
+</html>
+<script>
+
+    function scrollToElement(element) {
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: element.offsetTop
+        });
+    }
+
+    const containers = document.querySelectorAll('#container');
+
+    for (let i = 0; i < containers.length; i++) {
+        containers[i].addEventListener('click', () => {
+            const nextContainer = containers[i + 1]
+            if (nextContainer) {
+                scrollToElement(nextContainer);
+            }
+        });
+    }
+    
+    const topButton = document.getElementById('top-button');
+    topButton.addEventListener('click', () => {
+        scrollToElement(document.body);
+    });
+</script>
