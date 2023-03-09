@@ -11,65 +11,105 @@
         margin: 0;
         padding: 0;
       }
-      
       header {
-        background-color: #212121;
-        padding: 10px;
-        text-align: center;
-      }
-      
-      h1 {
-        margin: 0;
-      }
-      
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #333333;
-        padding: 10px;
-        font-size: 18px;
-      }
-      
-      nav a {
-        color: #ffffff;
-        text-decoration: none;
-        margin: 0 10px;
-      }
-      
-      nav a:hover {
-        text-decoration: underline;
-      }
-      
-      main {
-        padding: 10px;
-      }
-      
-      footer {
-        background-color: #212121;
-        padding: 10px;
-        text-align: center;
-        font-size: 14px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Solar System</h1>
-    </header>
-    <nav>
-      <a href="/SolarSystem/system.html">Solar System</a>
-      <a href="#">Planets</a>
-      <a href="#">Moons</a>
-      <a href="#">Asteroids</a>
-      <a href="#">Comets</a>
-    </nav>
-    <main>
-      <p>The Solar System is the gravitationally bound system of the Sun and the objects that orbit it, either directly or indirectly. Of the objects that orbit the Sun directly, the largest eight are the planets, with the remainder being smaller objects, such as dwarf planets and small Solar System bodies.</p>
-      <p>The Solar System formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud. The vast majority of the system's mass is in the Sun, with the majority of the remaining mass contained in Jupiter. The four smaller inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets, being primarily composed of rock and metal. The four outer planets are giant planets, being substantially more massive than the terrestrials.</p>
-    </main>
-    <footer>
-      <p>Copyright © Solar System</p>
-    </footer>
-  </body>
+    background-color: #212121;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 10px;
+  }
+  
+  footer {
+    background-color: #212121;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .content-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .content-item {
+    width: 30%;
+    margin-bottom: 20px;
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .content-item img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .content-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .content-item p {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Solar System</h1>
+  </header>
+  <nav>
+    <a href="/SolarSystem/system.html">Solar System</a>
+    <a href="#">Planets</a>
+    <a href="#">Moons</a>
+    <a href="#">Asteroids</a>
+    <a href="#">Comets</a>
+  </nav>
+  <main>
+    <p>The Solar System is the gravitationally bound system of the Sun and the objects that orbit it, either directly or indirectly. Of the objects that orbit the Sun directly, the largest eight are the planets, with the remainder being smaller objects, such as dwarf planets and small Solar System bodies.</p>
+    <p>The Solar System formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud. The vast majority of the system's mass is in the Sun, with the majority of the remaining mass contained in Jupiter. The four smaller inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets, being primarily composed of rock and metal. The four outer planets are giant planets, being substantially more massive than the terrestrials.</p>
+    <div class="content-section">
+      <div class="content-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXcNArVeHUgkC348bP6oUjrz28i-W7Ydr7PTlxtEX-zb-B750ExPHU6QYfnusXD1l7rqw&usqp=CAU" alt="International Space Station">
+        <h2>International Space Station</h2>
+          <p>The International Space Station (ISS) is a habitable artificial satellite that orbits the Earth. It is the largest human-made body in low Earth orbit and can be seen from the Earth with the naked eye. The ISS serves as a microgravity and space environment research laboratory in which scientific research is conducted in astrobiology, astronomy, meteorology, physics, and other fields.</p>
+          <p>The ISS is a joint project between five space agencies: NASA (United States), Roscosmos (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada). The station has been continuously occupied since November 2000 and is expected to remain in operation until at least 2028.</p>
+          <p>As of March 2023, the ISS has had more than 240 individuals from 19 countries visit it. The station is equipped with various facilities, including laboratories, living quarters, a gym, a cupola, and robotic arms.</p>
+          <p>For more information about the International Space Station, you can visit the official NASA website <a href="https://www.nasa.gov/mission_pages/station/main/index.html">here</a>.</p>
+</main>
+<footer>
+  <p>Made by Aashish Harishchandre</p>
+  <a href="https://github.com/AashishH15">GitHub</a>
+  <a href="https://www.linkedin.com/in/aashish-harishchandre/">Linkedin</a>
+</footer>
+</body>
 </html>
