@@ -42,19 +42,44 @@
       }
       
       main {
-        display: flex;
-        justify-content: space-between;
         padding: 10px;
-      }
-      
-      section {
-        width: 48%;
       }
       
       footer {
         background-color: #212121;
         padding: 10px;
         text-align: center;
+        font-size: 14px;
+      }
+      
+      .content-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      
+      .content-item {
+        width: 30%;
+        margin-bottom: 20px;
+        background-color: #333333;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      
+      .content-item img {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      
+      .content-item h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .content-item p {
+        margin-bottom: 10px;
         font-size: 14px;
       }
     </style>
@@ -71,20 +96,34 @@
       <a href="#">Comets</a>
     </nav>
     <main>
-      <section>
+      <div class="content-section">
+        <div class="content-item">
+          <img src="https://cdn.mos.cms.futurecdn.net/mPFET8wxkZENQazxvRg7K5.jpg" alt="International Space Station">
         <h2>International Space Station</h2>
         <p>The International Space Station (ISS) is a habitable artificial satellite that orbits the Earth. It is the largest human-made object in low Earth orbit and can often be seen with the naked eye from Earth. The ISS is a joint project between five space agencies: NASA, Roscosmos, JAXA, ESA, and CSA.</p>
         <p>The ISS is used for scientific research, space exploration, and international cooperation. Astronauts living on the ISS conduct experiments in fields such as biology, physics, and astronomy. They also perform maintenance tasks and conduct spacewalks to repair and upgrade the station.</p>
         <p>For more information about the International Space Station and its missions, you can visit the official NASA website <a href="https://www.nasa.gov/mission_pages/station/main/index.html">here</a>.</p>
-      </section>
-      <section>
+      </div>
+      <div class="content-section">
+        <div class="content-item">
+          <img src="https://media.npr.org/assets/img/2022/12/09/saluteas17-134-20380-04666faa8117608662b03dc699a1f10e7ba70871.jpg" alt="Moon Landing">
         <h2>Moon Landing</h2>
         <p>The Moon Landing was a historic event that occurred on July 20, 1969, when the Apollo 11 mission, commanded by Neil Armstrong, landed on the surface of the Moon. This event marked the first time a human had ever set foot on another celestial body.</p>
         <p>The mission was launched by the National Aeronautics and Space Administration (NASA) and was a significant achievement in space exploration, technology, and science. The landing was made possible by the development of the Saturn V rocket, the Lunar Module spacecraft, and the spacesuits worn by the astronauts.</p>
         <p>Neil Armstrong and Edwin "Buzz" Aldrin spent approximately two and a half hours walking on the lunar surface, performing experiments, collecting samples, and taking photographs. Michael Collins, the third member of the crew, piloted the Command Module in lunar orbit.</p>
         <p>The Moon Landing was a significant achievement in space exploration and inspired new developments in science and technology. It also represented a major milestone in the Space Race between the United States and the Soviet Union.</p>
         <p>For more information about the Moon Landing and the Apollo program, you can visit the official NASA website <a href="https://www.nasa.gov/mission_pages/apollo/apollo11.html">here</a>.</p>
+      </div>
+      <div class="content-section">
+        <div class="content-item">
+          <img src="https://cdn.mos.cms.futurecdn.net/ECG6JgJm8bgneRW47o458h.jpg" alt="SpaceX Mars Mission">
+          <h2>SpaceX Mars Mission</h2>
+          <p>The SpaceX Mars Mission is a planned mission to send a robotic spacecraft to the planet Mars. The mission is being conducted by SpaceX, a private aerospace company founded by entrepreneur Elon Musk. The mission is scheduled to launch in 2022 and will be the first mission to Mars to be launched by a private aerospace company.</p>
+          <p>The mission will involve the launch of a SpaceX Falcon Heavy rocket carrying a robotic spacecraft called the Red Dragon. The spacecraft will be equipped with a suite of scientific instruments and will be used to study the surface and atmosphere of Mars. After the mission is complete, the spacecraft will return to Earth with samples of Martian soil and rock.</p>
+          <p>In addition to conducting scientific research, the mission will also serve as a test for SpaceX's proposed Interplanetary Transport System, which would be used for future human space exploration. The mission will also test out new propellant technology, such as the methane-based Raptor engine, which may be used for future human space exploration.</p>
+          <p>For more information about the SpaceX Mars Mission and its progress, you can visit the official SpaceX website <a href="https://www.spacex.com/mars">here</a>.</p>
 </main>
+
 <footer>  
   <p>Made by Aashish Harishchandre</p>
   <a href="https://github.com/AashishH15">GitHub</a>
