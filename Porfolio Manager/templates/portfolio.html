@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <h1>My Portfolio</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Shares</th>
+          <th>Cost Basis</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for holding in holdings %}
+          <tr>
+            <td>{{ holding[0] }}</td>
+            <td>{{ holding[1] }}</td>
+            <td>{{ holding[2] }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p>Portfolio Value: ${{ portfolio_value }}</p>
+    <form action="{{ url_for('portfolio') }}" method="POST">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <label for="symbol">Symbol:</label>
+      <input type="text" id="symbol" name="symbol">
+      <label for="shares">Shares:</label>
+      <input type="text" id="shares" name="shares">
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price">
+      <button type="submit">Buy</button>
+    </form>
+  </body>
+</html>

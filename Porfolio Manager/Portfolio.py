@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 class Portfolio:
     def __init__(self):
@@ -29,36 +28,3 @@ class Portfolio:
         else:
             value_series = self.holdings.set_index('symbol')['shares'] * prices
             return value_series.sum()
-
-class Stock:
-    def __init__(self, symbol, prices):
-        self.symbol = symbol
-        self.prices = prices
-
-    def moving_average(self, window_size):
-        return pd.Series(self.prices).rolling(window=window_size).mean()
-
-if __name__ == '__main__':
-    portfolio = Portfolio()
-
-    while True:
-        symbol = input("Enter stock symbol (or type 'done' to finish): ")
-        if symbol.lower() == 'done':
-            break
-        shares = int(input("Enter number of shares: "))
-        price = float(input("Enter price: "))
-        portfolio.buy(symbol, shares, price)
-
-    portfolio_value = portfolio.value(price)
-
-    while True:
-        symbol = input("Enter stock symbol to update (or type 'done' to finish): ")
-        if symbol.lower() == 'done':
-            break
-        shares = int(input("Enter new number of shares: "))
-        cost_basis = float(input("Enter new cost basis: "))
-        portfolio.update(symbol, shares, cost_basis)
-
-    print("Portfolio holdings:")
-    print(portfolio.holdings)
-    print(f"Portfolio value: ${portfolio_value:.2f}")
