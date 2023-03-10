@@ -16,9 +16,9 @@
       <tbody>
         {% for holding in holdings %}
           <tr>
-            <td>{{ holding[0] }}</td>
-            <td>{{ holding[1] }}</td>
-            <td>{{ holding[2] }}</td>
+            <td>{{ holding.symbol }}</td>
+            <td>{{ holding.shares }}</td>
+            <td>{{ holding.cost_basis }}</td>
           </tr>
         {% endfor %}
       </tbody>
@@ -33,6 +33,18 @@
       <label for="price">Price:</label>
       <input type="text" id="price" name="price">
       <button type="submit">Buy</button>
+    </form>
+
+    <h2>Update Holdings</h2>
+    <form action="{{ url_for('update') }}" method="POST">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <label for="symbol">Symbol:</label>
+      <input type="text" id="symbol" name="symbol">
+      <label for="shares">Shares:</label>
+      <input type="text" id="shares" name="shares">
+      <label for="cost_basis">Cost Basis:</label>
+      <input type="text" id="cost_basis" name="cost_basis">
+      <button type="submit">Update</button>
     </form>
   </body>
 </html>
