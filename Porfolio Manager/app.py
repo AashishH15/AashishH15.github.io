@@ -16,7 +16,7 @@ def home():
 def portfolio():
     portfolio_data = portfolio.get_portfolio()
     portfolio_value = 0
-    csrf_token = csrf_token = request.form.get('csrf_token') or request.args.get('csrf_token') or csrf.protect()
+    csrf_token = csrf_token = request.form.get('csrf_token') or request.args.get('csrf_token')
 
     if request.method == 'POST':
         symbol = request.form['symbol']
@@ -35,7 +35,7 @@ def update():
     portfolio = PortfolioSQL(db_path)
     portfolio_data = portfolio.get_portfolio()
     portfolio_value = 0
-    csrf_token = request.form.get('csrf_token') or request.args.get('csrf_token') or csrf.protect()
+    csrf_token = request.form.get('csrf_token') or request.args.get('csrf_token')
 
     if request.method == 'POST':
         symbol = request.form['symbol']
